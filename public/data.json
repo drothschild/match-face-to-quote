@@ -1,0 +1,28 @@
+{
+  "People": [{
+    "name": "Ben Carson",
+    "picture": "bcarson.jpg",
+    "quote": "I'm Ben Carson!"
+  },
+  {
+    "name": "Nikki Haley",
+    "picture": "nhaley.jpg",
+    "quote": "I'm Nikki Haley!"
+  },
+  {
+    "name": "Jeff Sessions",
+    "picture": "nhaley.jpg",
+    "quote": "I'm Jeff Sessions!"
+  },
+    {
+    "name": "Betty DeVos",
+    "picture": "bdevos.jpg",
+    "quote": "I'm Betty Devose!"
+  },
+  {
+    "name": "John Smith",
+    "picture": "jsmith.jpg",
+    "quote": "I'm John Smith!"
+  }
+  ]
+}
