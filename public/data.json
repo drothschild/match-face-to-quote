@@ -1,27 +1,53 @@
 {
-  "People": [{
+  "people": [{
+    "id": 1,
     "name": "Ben Carson",
-    "picture": "bcarson.jpg",
+    "picture": "bcarson.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Nikki Haley",
+    "picture": "nhaley.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Jeff Sessions",
+    "picture": "jsessions.jpg"
+  },
+    {
+    "id": 4,
+    "name": "Betty DeVos",
+    "picture": "bdevos.jpg"
+  },
+    {
+      "id": 5,      
+      "name": "John Smith",
+      "picture": "jsmith.jpg"
+    }
+  ],
+  "quotes": [{
+    "id": 1,
+    "personId": 1,
     "quote": "I'm Ben Carson!"
   },
   {
-    "name": "Nikki Haley",
-    "picture": "nhaley.jpg",
+    "id": 2,
+    "personId": 2,
     "quote": "I'm Nikki Haley!"
   },
   {
-    "name": "Jeff Sessions",
-    "picture": "nhaley.jpg",
+    "id": 3,
+    "personId": 3,
     "quote": "I'm Jeff Sessions!"
   },
     {
-    "name": "Betty DeVos",
-    "picture": "bdevos.jpg",
+    "id": 4,
+    "personId": 4,
     "quote": "I'm Betty Devose!"
   },
   {
-    "name": "John Smith",
-    "picture": "jsmith.jpg",
+    "id": 5,
+    "personId": 5,
     "quote": "I'm John Smith!"
   }
   ]
