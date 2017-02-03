@@ -1,0 +1,4 @@
+.GameBoard-PeopleCards {
+  display: flex;
+  list-style: none;
+}

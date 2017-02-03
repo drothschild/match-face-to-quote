@@ -1,25 +1,23 @@
 import React, {Component } from 'react'
 const { people, quotes } = require('../public/data')
 import PersonCard from './PersonCard'
-// import Quote from './Quote'
-
-
+import './GameBoard.css';
 
 class GameBoard  extends Component {
-
   constructor(props) {
     super(props)
-    this.state= {
+    this.state={
       quoteIndex: 0,
       answerGuessed:false
     }
     this.pickPerson = this.pickPerson.bind(this)
     this.goToNext = this.goToNext.bind(this)
   }
+
   componentWillMount(){
     this.setState({
-      shuffledPeople: this.shuffle(people),
-      shuffledQuotes: this.shuffle(quotes)
+      shuffledQuotes: this.shuffle(quotes),
+      shuffledPeople: this.changeAllStatus(this.shuffle(people),"Available")
     })
   }
 
@@ -41,18 +39,36 @@ class GameBoard  extends Component {
     return array
   }
 
+  changeOneStatus(array,id,status){
+    return array.map(function(element){
+        if(id===element.id){
+          element.status= status
+        }
+        return element
+      })
+  }
+
+  changeAllStatus(array, status) {
+   return array.map(function (element){
+       element.status = status
+       return element
+    })
+  }
+
   pickPerson(id){
     if (this.state.answerGuessed) return
-    const quote = this.state.shuffledQuotes[this.state.quoteIndex]
+    const { shuffledPeople, shuffledQuotes, quoteIndex } = this.state   
+    const quote = shuffledQuotes[quoteIndex]
     if (id === quote.personId){
-      console.log("correct")
-      // change Display to right answer
       this.setState ({
-        answerGuessed: true
+        answerGuessed: true,
+        shuffledPeople: this.changeOneStatus(this.changeAllStatus(shuffledPeople, "Incorrect"), id, "Correct")
             })
+
     } else {
-      console.log("wrong")
-      // Change Display to Wrong Answer
+      this.setState ({
+        shuffledPeople: this.changeOneStatus(shuffledPeople, id, "Incorrect")
+            })
     }
   }
 
@@ -66,7 +82,7 @@ class GameBoard  extends Component {
     } else {
       this.setState ({
               quoteIndex: this.state.quoteIndex + 1,
-              shuffledPeople: this.shuffle(this.state.shuffledPeople),
+              shuffledPeople: this.changeAllStatus(this.shuffle(people),"Available"),
               answerGuessed: false
             })
     }
@@ -74,7 +90,6 @@ class GameBoard  extends Component {
 
   render(){
     const { quoteIndex, shuffledQuotes,shuffledPeople, answerGuessed } = this.state
-    console.log(quoteIndex)
     let quote, peopleCards
     if (quoteIndex !== null) {
       quote = shuffledQuotes[quoteIndex].quote
@@ -92,11 +107,11 @@ class GameBoard  extends Component {
         <h1>Who said it?</h1>
         <div className="GameBoard-Quote">
           {quote}
-        </div>
-        {nextArrow}
+        </div>     
         <ul className="GameBoard-PeopleCards">
           {peopleCards}
         </ul>
+        {nextArrow}
       </div>
       )
   }
