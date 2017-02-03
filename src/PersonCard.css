@@ -2,10 +2,22 @@
   border-width: 5px;
   border-style: solid;
   border-radius: 20px;
-  background-color: grey;
-  
+  background-color: grey; 
   display: block;
   width: 75px;
   height: 107.5px;
-  transition: bottom 1s, left 1s, width 1s, height 1s, transform 1s;
+  margin: 5px;
+  transition: bottom 1s, left 1s, width 1s, height 1s, transform 1s background-color .5s;
+
+}
+.Available {
+  cursor: pointer;
+}
+.Correct {
+  background-color: green;
+  cursor: not-allowed;
+}
+.Incorrect {
+  background-color: red;
+  cursor: not-allowed;
 }

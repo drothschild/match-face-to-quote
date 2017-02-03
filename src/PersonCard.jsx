@@ -10,6 +10,7 @@ class PersonCard  extends Component {
     }
     this.handleClick=this.handleClick.bind(this)
   }
+  
   handleClick(){
     if (this.state.cardStyle !== "Available") return
     this.props.handleClick(this.props.person.id)
@@ -17,9 +18,10 @@ class PersonCard  extends Component {
 
   render(){
     const { person } = this.props
+    const style = "PersonCard " + person.status
     return(
-      <div className="PersonCard" onClick={this.handleClick}>
-        {person.name}-{person.status} 
+      <div className={style} onClick={this.handleClick}>
+        {person.name}
       </div>
       )
     }
