@@ -42,7 +42,7 @@ class GameBoard  extends Component {
   changeOneStatus(array,id,status){
     return array.map(function(element){
         if(id===element.id){
-          element.status= status
+          element.status = status
         }
         return element
       })

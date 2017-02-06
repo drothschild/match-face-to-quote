@@ -1,23 +1,33 @@
 .PersonCard {
-  border-width: 5px;
+  border-width: 3px;
   border-style: solid;
-  border-radius: 20px;
-  background-color: grey; 
+  border-radius: 20px; 
   display: block;
   width: 75px;
-  height: 107.5px;
   margin: 5px;
-  transition: bottom 1s, left 1s, width 1s, height 1s, transform 1s background-color .5s;
-
+  transition: bottom 1s, left 1s, width 1s, height 1s, transform 3s, border-color .5s
 }
 .Available {
   cursor: pointer;
 }
 .Correct {
-  background-color: green;
-  cursor: not-allowed;
+  border-color: green;
 }
 .Incorrect {
-  background-color: red;
+  border-color: red;
   cursor: not-allowed;
+  transform: rotateX( 60deg ) ;
+}
+
+img { 
+  height: auto;
+   width: 100%; 
+   max-width: 100%;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+}
+
+.PersonCard-Name { 
+   top: 50px; 
+   width: 100%; 
 }

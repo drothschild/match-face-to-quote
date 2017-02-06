@@ -3,4 +3,6 @@
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
+  vertical-align: bottom;
 }
+

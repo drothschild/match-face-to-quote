@@ -1,13 +1,13 @@
 {
   "people": [{
     "id": 1,
-    "name": "Ben Carson",
-    "picture": "bcarson.jpg"
+    "name": "Rick Perry",
+    "picture": "rperry.png"
   },
   {
     "id": 2,
-    "name": "Nikki Haley",
-    "picture": "nhaley.jpg"
+    "name": "Tom Price",
+    "picture": "tprice.jpg"
   },
   {
     "id": 3,
@@ -16,39 +16,39 @@
   },
     {
     "id": 4,
-    "name": "Betty DeVos",
-    "picture": "bdevos.jpg"
+    "name": "Betsy DeVos",
+    "picture": "bdevos.png"
   },
     {
       "id": 5,      
-      "name": "John Smith",
-      "picture": "jsmith.jpg"
+      "name": "Andrew Puzder",
+      "picture": "apuzder.jpg"
     }
   ],
   "quotes": [{
     "id": 1,
     "personId": 1,
-    "quote": "I'm Ben Carson!"
+    "quote": " On oil spills: \"From time to time there are going to be things that occur that are acts of God that cannot be prevented.\" "
   },
   {
     "id": 2,
     "personId": 2,
-    "quote": "I'm Nikki Haley!"
+    "quote": "On access to contraception: \" Bring me one woman who has been left behind. Bring me one. There’s not one.\""
   },
   {
     "id": 3,
     "personId": 3,
-    "quote": "I'm Jeff Sessions!"
+    "quote": "On the KKK: \"was okay until I found out they smoked pot.\""
   },
     {
     "id": 4,
     "personId": 4,
-    "quote": "I'm Betty Devos!"
+    "quote": "\"I would imagine that there is probably a gun in the schools to protect from potential grizzlies.\""
   },
   {
     "id": 5,
     "personId": 5,
-    "quote": "I'm John Smith!"
+    "quote": "\"I like beautiful women eating burgers in bikinis. I think it’s very American.\""
   }
   ]
 }
