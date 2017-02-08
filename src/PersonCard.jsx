@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './PersonCard.css';
+import { Image } from 'react-bootstrap';
+
 
 
 class PersonCard  extends Component {
@@ -19,10 +21,12 @@ class PersonCard  extends Component {
   render(){
     const { person } = this.props
     const style = "PersonCard " + person.status
+    const firstName = person.name.split(" ")[0]
+    const lastName = person.name.split(" ")[1]
     return(
       <div className={style} onClick={this.handleClick}>
-        <img src={process.env.PUBLIC_URL + '/img/' + person.picture} alt={person.name} />
-        <span className="PersonCard-Name">{person.name}</span>
+        <Image src={process.env.PUBLIC_URL + '/img/' + person.picture} alt={person.name} responsive/>
+        <div className="PersonCard-Name">{firstName}<br />{lastName}</div>
       </div>
       )
     }

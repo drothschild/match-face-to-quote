@@ -5,29 +5,32 @@
   display: block;
   width: 75px;
   margin: 5px;
-  transition: bottom 1s, left 1s, width 1s, height 1s, transform 3s, border-color .5s
+  transition: all .8s;
 }
 .Available {
   cursor: pointer;
 }
 .Correct {
   border-color: green;
+  transform: scaleX(1.3);
 }
 .Incorrect {
-  border-color: red;
   cursor: not-allowed;
-  transform: rotateX( 60deg ) ;
+  transform: rotateX( 60deg );
+  filter: grayscale(100%);
 }
 
 img { 
   height: auto;
-   width: 100%; 
+   width: 100%;
+   min-height: 92.5px;
    max-width: 100%;
    border-top-right-radius: 10px;
    border-top-left-radius: 10px;
 }
 
+
 .PersonCard-Name { 
-   top: 50px; 
-   width: 100%; 
+  top: 50px; 
+  width: 100%; 
 }

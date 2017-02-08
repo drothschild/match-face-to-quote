@@ -3,6 +3,22 @@
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
-  vertical-align: bottom;
+}
+
+.GameBoard-Quote{
+    display: inline-block;
+    overflow: hidden;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #4ADFCC;
+    margin-top: 25px;
+    color:white;
+    width: 75%;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+.GameBoard-Quote-Text{
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 19px;
 }
 

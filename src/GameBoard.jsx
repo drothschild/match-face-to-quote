@@ -2,6 +2,9 @@ import React, {Component } from 'react'
 const { people, quotes } = require('../public/data')
 import PersonCard from './PersonCard'
 import './GameBoard.css';
+import { Button, Panel, Alert } from 'react-bootstrap';
+
+
 
 class GameBoard  extends Component {
   constructor(props) {
@@ -90,29 +93,31 @@ class GameBoard  extends Component {
 
   render(){
     const { quoteIndex, shuffledQuotes,shuffledPeople, answerGuessed } = this.state
-    let quote, peopleCards
+    let quote, peopleCards, title
     if (quoteIndex !== null) {
-      quote = shuffledQuotes[quoteIndex].quote
+      quote = <div className="GameBoard-Quote-Text"> {shuffledQuotes[quoteIndex].quote}</div>
       peopleCards = shuffledPeople.map((person) =>(<li key={person.id}><PersonCard person={person} key={person.id} handleClick={this.pickPerson}/></li>
           ))
+      title = (<h1>Who said it?</h1>)
     } else
     {
-      quote = "Call your Rep"
+      title = (<h1>What do you say?</h1>)
+      quote = <Alert bsStyle="warning">
+      These are actual cabinet nominees. Think we can do better? Call your Congress members to tell them to have standards!  
+       <a href="tel:1-888-623-4558">(888) 623-4558</a>
+        </Alert>
       peopleCards = null
     }
-    const nextArrow = answerGuessed ? <button onClick={this.goToNext}>Next</button> : null
+    const nextArrow = answerGuessed ? <Button onClick={this.goToNext}>Next</Button> : null
 
     return(      
-      <div className="GameBoard">
-        <h1>Who said it?</h1>
-        <div className="GameBoard-Quote">
-          {quote}
-        </div>     
+      <Panel header={title} bsStyle="primary"className="GameBoard">
+        <div className="GameBoard-Quote">{quote}</div>     
         <ul className="GameBoard-PeopleCards">
           {peopleCards}
         </ul>
         {nextArrow}
-      </div>
+      </Panel>
       )
   }
 }
